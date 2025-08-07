@@ -1,0 +1,40 @@
+[project]
+name = "querybot"
+version = "0.1.0"
+description = "LangGraph-based intelligent query bot that converts natural language to SQL with advanced vector search"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # Core AI frameworks
+    "langchain",
+    "langchain-core",
+    "langchain-openai",
+    "langchain-community",
+    "langgraph",
+    "langfuse",
+
+    # Web frameworks
+    "fastapi",
+    "uvicorn",
+    "streamlit",
+
+    # Data processing
+    "pandas",
+    "pymilvus",
+    "sqlalchemy",
+    "pymysql",
+    "mysql-connector-python",
+    "psycopg2-binary",  # PostgreSQL adapter
+    "sqlparse",
+
+    # Utility libraries
+    "requests",
+    "aiohttp",
+    "python-dotenv",
+    "pydantic",
+    "pydantic-settings",
+    "tqdm",
+    "tabulate",
+    "pillow",
+    "pyyaml",
+]

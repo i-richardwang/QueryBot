@@ -1,0 +1,79 @@
+{
+    "collections": {
+        "table_descriptions": {
+            "name": "table_descriptions",
+            "description": "Collection for storing database table descriptions and their vector representations",
+            "fields": [
+                {
+                    "name": "table_name",
+                    "type": "str",
+                    "description": "Name of the database table"
+                },
+                {
+                    "name": "description",
+                    "type": "str",
+                    "description": "Description of the table's purpose and content",
+                    "is_vector": true
+                },
+                {
+                    "name": "additional_info",
+                    "type": "str",
+                    "description": "Additional information about table usage"
+                },
+                {
+                    "name": "schema",
+                    "type": "str",
+                    "description": "Table schema information including columns and their details"
+                }
+            ],
+            "embedding_fields": [
+                "description"
+            ]
+        },
+        "term_descriptions": {
+            "name": "term_descriptions",
+            "description": "Collection for storing term standardization and definitions",
+            "fields": [
+                {
+                    "name": "original_term",
+                    "type": "str",
+                    "description": "Original term or phrase",
+                    "is_vector": true
+                },
+                {
+                    "name": "standard_name",
+                    "type": "str",
+                    "description": "Standardized name of the term"
+                },
+                {
+                    "name": "additional_info",
+                    "type": "str",
+                    "description": "Additional information about the term"
+                }
+            ],
+            "embedding_fields": [
+                "original_term"
+            ]
+        },
+        "query_examples": {
+            "name": "query_examples",
+            "description": "SQL query examples collection",
+            "fields": [
+                {
+                    "name": "query_text",
+                    "type": "str",
+                    "description": "Query question",
+                    "is_vector": true
+                },
+                {
+                    "name": "query_sql",
+                    "type": "str",
+                    "description": "Corresponding SQL query statement"
+                }
+            ],
+            "embedding_fields": [
+                "query_text"
+            ]
+        }
+    }
+}
