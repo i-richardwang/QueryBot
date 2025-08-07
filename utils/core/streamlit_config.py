@@ -107,7 +107,7 @@ def setup_environment_for_streamlit():
         if value is not None:  # Only set non-empty values
             os.environ[key] = str(value)
     
-    print(f"\u2705 Loaded {len(streamlit_secrets)} configuration items from Streamlit secrets")
+    print(f"Loaded {len(streamlit_secrets)} configuration items from Streamlit secrets")
 
 
 @lru_cache()
@@ -153,11 +153,11 @@ def get_demo_settings() -> Settings:
     """
     if is_streamlit_cloud():
         # Running on Streamlit Cloud
-        print("\ud83c\udf10 Running on Streamlit Cloud - using secrets configuration")
+        print("Running on Streamlit Cloud - using secrets configuration")
         return get_streamlit_settings()
     else:
         # Local development environment
-        print("\ud83d\udcbb Running locally - using .env configuration")
+        print("Running locally - using .env configuration")
         from .config import settings
         return settings
 
