@@ -97,9 +97,10 @@ class LLMConfig(BaseSettings):
 class EmbeddingConfig(BaseSettings):
     """Embedding model configuration."""
 
-    api_key: str = Field(..., description="Embedding model API key")
+    # Make optional to avoid hard failure at import time; validate at usage
+    api_key: Optional[str] = Field(default=None, description="Embedding model API key")
     api_base: str = Field(
-        default="https://api.siliconflow.cn/v1/embeddings",
+        default="https://api.siliconflow.cn/v1",
         description="Embedding model API base URL"
     )
     model: str = Field(default="bge-large-zh", description="Embedding model name")

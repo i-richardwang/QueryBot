@@ -6,8 +6,8 @@ import os
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(project_root)
 
-# Initialize configuration (automatically loaded from .env file)
-from utils.core.config import settings
+# Initialize configuration (auto-detect .env locally or Streamlit Cloud secrets)
+from utils.core.streamlit_config import settings
 from page.sql_assistant import run_query_bot
 
 # Set page configuration
