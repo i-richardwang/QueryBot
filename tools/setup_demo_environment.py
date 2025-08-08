@@ -20,7 +20,7 @@ project_root = Path(__file__).parent.parent
 sys.path.append(str(project_root))
 
 from tools.data_generation.generate_recruitment_data import RecruitmentDataGenerator
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 
 class SetupEnvironment:

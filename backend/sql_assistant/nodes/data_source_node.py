@@ -20,7 +20,7 @@ from utils.services.milvus_service import search_in_milvus
 from utils.services.llm import init_language_model, LanguageModelChain
 
 # Core infrastructure imports
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 logger = logging.getLogger(__name__)
 

@@ -14,7 +14,7 @@ from utils.core.error_handler import (
     error_handler,
     ErrorLevel
 )
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 logger = get_logger(__name__)
 

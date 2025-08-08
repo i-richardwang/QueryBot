@@ -129,7 +129,7 @@ def sql_generation_node(state: SQLAssistantState) -> dict:
 
     try:
         # Get database type from configuration
-        from utils.core.config import settings
+        from utils.core.streamlit_config import settings
         db_type = settings.database.type.upper()
 
         input_data = {

@@ -232,7 +232,7 @@ def run_vector_db_management():
 
     # Database Selection
     st.header("Select Database")
-    from utils.core.config import settings
+    from utils.core.streamlit_config import settings
     db_names = [settings.vector_db.database, "data_cleaning"]
     selected_db = st.selectbox("Select the database to operate on", db_names)
 

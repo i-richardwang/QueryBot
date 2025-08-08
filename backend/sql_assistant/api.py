@@ -16,7 +16,7 @@ from langgraph.checkpoint.memory import MemorySaver
 from backend.sql_assistant.utils.user_mapper import UserMapper
 from langchain_core.globals import set_llm_cache
 from langchain_community.cache import SQLiteCache
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 # Setup logger
 logger = logging.getLogger(__name__)

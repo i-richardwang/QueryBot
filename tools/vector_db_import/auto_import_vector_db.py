@@ -22,7 +22,7 @@ from utils.services.milvus_service import (
 )
 
 # Core infrastructure imports
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 from pymilvus import Collection, utility
 

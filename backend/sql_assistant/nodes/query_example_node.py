@@ -16,7 +16,7 @@ from utils.factories.embedding import EmbeddingFactory
 from utils.services.milvus_service import search_in_milvus
 
 # Core infrastructure imports
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 logger = logging.getLogger(__name__)
 

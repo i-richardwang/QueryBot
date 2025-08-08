@@ -15,7 +15,7 @@ sys.path.append(project_root)
 from utils.factories.database import DatabaseFactory
 
 # Core infrastructure imports
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 
 def connect_to_mysql():

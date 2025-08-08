@@ -18,7 +18,7 @@ from backend.sql_assistant.states.assistant_state import SQLAssistantState
 from utils.factories.database import DatabaseFactory
 
 # Core infrastructure imports
-from utils.core.config import settings
+from utils.core.streamlit_config import settings
 
 logger = logging.getLogger(__name__)
 

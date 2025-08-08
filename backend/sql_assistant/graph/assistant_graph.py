@@ -47,7 +47,7 @@ def initialize_langfuse():
     Initialize Langfuse client (only when enabled).
     In Langfuse 3.x, the client needs to be initialized at application startup.
     """
-    from utils.core.config import settings
+    from utils.core.streamlit_config import settings
     if settings.monitoring.langfuse_enabled:
         try:
             Langfuse(
@@ -211,7 +211,7 @@ def run_query_bot(
     # Execute graph
     try:
         # Use span context only when Langfuse is enabled
-        from utils.core.config import settings
+        from utils.core.streamlit_config import settings
         if settings.monitoring.langfuse_enabled:
             langfuse_client = get_client()
             with langfuse_client.start_as_current_span(name="query-bot-query") as span:
@@ -291,7 +291,7 @@ def stream_query_bot(
 
     # Stream execution with Langfuse monitoring
     try:
-        from utils.core.config import settings
+        from utils.core.streamlit_config import settings
         if settings.monitoring.langfuse_enabled:
             langfuse_client = get_client()
             with langfuse_client.start_as_current_span(name="query-bot-stream") as span:

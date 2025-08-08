@@ -35,7 +35,7 @@ def init_language_model(
     Raises:
         ValueError: Raised when provided parameters are invalid or necessary configuration is missing.
     """
-    from utils.core.config import settings
+    from utils.core.streamlit_config import settings
 
     llm_config = settings.llm
     model_name = model_name or llm_config.model
